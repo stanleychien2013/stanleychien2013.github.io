@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>義大利麵大觀園 - 日式動漫風部落格</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@400;600;800&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        anime: {
+                            sky: '#e0f2fe',
+                            sun: '#fde68a',
+                            pasta: '#fbbf24',
+                            sauce: '#ef4444',
+                            leaf: '#10b981',
+                            dark: '#1e293b',
+                            card: 'rgba(255, 255, 255, 0.85)',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        artistic: ['Zhi Mang Xing', 'cursive'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'scroll-reveal': 'reveal 1s ease-out forwards',
+                        'pulse-soft': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        reveal: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .anime-gradient {
+            background: linear-gradient(135deg, #fef9c3 0%, #ffedd5 50%, #e0f2fe 100%);
+        }
+
+        .text-glow {
+            text-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+        }
+
+        .sidebar-item:hover {
+            transform: translateX(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .content-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .content-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #fbbf24;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="anime-gradient text-slate-800 font-sans leading-relaxed selection:bg-orange-200">
+
+    <!-- Header Section -->
+    <header class="relative w-full h-[60vh] md:h-[75vh] overflow-hidden">
+        <div class="absolute inset-0">
+            <img src='https://opal.google/board/blobs/e274046d-64c0-4f78-8bea-d5a313840938' alt='義大利麵大觀園 Banner' class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-white"></div>
+        </div>
+        
+        <div class="absolute inset-0 flex flex-col items-center justify-end pb-12 px-4 text-center">
+            <div class="glass-morphism px-8 py-6 rounded-3xl animate-float">
+                <h1 class="font-display font-black text-4xl md:text-6xl text-slate-800 mb-2 tracking-tight">
+                    🍝 義大利麵大觀園
+                </h1>
+                <p class="text-orange-600 font-bold tracking-[0.2em] md:text-xl">
+                    PASTA WONDERLAND BLOG
+                </p>
+                <div class="mt-4 flex justify-center items-center gap-4 text-sm font-medium text-slate-500">
+                    <span class="flex items-center gap-1"><span class="w-2 h-2 bg-green-400 rounded-full"></span> 知識份子的餐盤</span>
+                    <span class="flex items-center gap-1"><span class="w-2 h-2 bg-blue-400 rounded-full"></span> 學號：D11016005</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 md:px-8 -mt-8 relative z-10 pb-20">
+        
+        <!-- Intro Bento Box -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="md:col-span-2 glass-morphism p-8 rounded-[2rem] content-card">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <span class="text-3xl">🌟</span> 前言：為什麼義大利麵總是那麼「彈牙」？
+                </h2>
+                <p class="text-lg leading-relaxed text-slate-700">
+                    你有沒有想過，為什麼中式的擔仔麵追求「滑溜」，而義大利麵卻非要有那種「咬勁」不可？
+                </p>
+                <div class="mt-6 bg-white/50 p-6 rounded-2xl border-l-8 border-orange-400 italic">
+                    這一切的靈魂都藏在 <strong class="text-orange-600">杜蘭小麥（Durum Wheat）</strong> 裡。這種小麥硬度極高，賦予麵條那種被稱為「Al Dente」的靈魂彈跳感。
+                </div>
+            </div>
+            <div class="bg-blue-500/10 backdrop-blur-md p-8 rounded-[2rem] border border-blue-200 flex flex-col justify-center items-center text-center content-card">
+                <div class="text-5xl mb-4 animate-bounce">🍝</div>
+                <div class="text-3xl font-black text-blue-600">300+</div>
+                <div class="text-sm font-bold text-blue-800 tracking-wider">世界麵條型態</div>
+                <p class="text-xs mt-4 text-slate-500">
+                    不僅是義大利人的閒暇，更是一場關於幾何構造與醬汁吸附率的極致辯論。
+                </p>
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-12">
+            
+            <!-- Main Article Content -->
+            <article class="lg:w-2/3 space-y-12">
+                
+                <!-- Section 1 -->
+                <section class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <span class="text-4xl font-display font-black text-orange-400/30">01.</span>
+                        <h2 class="text-3xl font-bold border-b-4 border-orange-400 pb-2">麵條選秀：誰才是你的真命天「麵」？</h2>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div class="bg-white rounded-[1.5rem] p-6 shadow-sm border border-slate-100 hover:border-orange-200 transition-colors">
+                            <h3 class="text-xl font-bold text-orange-600 mb-4 flex items-center gap-2">
+                                <span class="w-2 h-6 bg-orange-400 rounded-full"></span> 長麵組 (Long Pasta)
+                            </h3>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <li class="p-4 bg-orange-50 rounded-xl">
+                                    <span class="font-bold block text-lg mb-1">Spaghetti（圓直麵）</span>
+                                    全能經典款，就像音樂界的莫札特。
+                                </li>
+                                <li class="p-4 bg-orange-50 rounded-xl">
+                                    <span class="font-bold block text-lg mb-1">Linguine（細扁麵）</span>
+                                    為海鮮而生，清爽青醬的最佳搭檔。
+                                </li>
+                                <li class="p-4 bg-orange-50 rounded-xl md:col-span-2">
+                                    <span class="font-bold block text-lg mb-1">Fettuccine（寬麵）</span>
+                                    強大的吸附力，與濃郁白醬簡直是天作之合。
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-rose-50 rounded-[1.5rem] p-6 border border-rose-100">
+                                <h3 class="text-xl font-bold text-rose-600 mb-4">短麵組 (Short Pasta)</h3>
+                                <div class="space-y-3 text-slate-700">
+                                    <p><strong>Penne (筆管麵):</strong> 微型水利工程。</p>
+                                    <p><strong>Fusilli (螺旋麵):</strong> 表面積成倍增加。</p>
+                                    <p><strong>Farfalle (蝴蝶麵):</strong> 優雅與層次共存。</p>
+                                </div>
+                            </div>
+                            <div class="bg-emerald-50 rounded-[1.5rem] p-6 border border-emerald-100">
+                                <h3 class="text-xl font-bold text-emerald-600 mb-4">驚喜組 (Surprise)</h3>
+                                <div class="space-y-3 text-slate-700">
+                                    <p><strong>Lasagna:</strong> 像厚實的歷史書。</p>
+                                    <p><strong>Ravioli:</strong> 風味的精緻包容。</p>
+                                    <p><strong>Gnocchi:</strong> 宛如雲朵的溫柔派。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2: Timeline Style -->
+                <section class="relative pl-8 border-l-2 border-dashed border-orange-300 space-y-6">
+                    <div class="absolute -left-[11px] top-0 w-5 h-5 bg-orange-400 rounded-full border-4 border-white"></div>
+                    <div class="flex items-center gap-4">
+                        <span class="text-4xl font-display font-black text-orange-400/30">02.</span>
+                        <h2 class="text-3xl font-bold">義大利麵時光機</h2>
+                    </div>
+                    <div class="bg-slate-800 text-white p-8 rounded-[2rem] shadow-xl relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 text-8xl font-black">HIST</div>
+                        <p class="relative z-10 text-slate-300 leading-relaxed italic">
+                            如果不談歷史，我們就無法理解義大利麵的「血統」。
+                        </p>
+                        <div class="mt-6 space-y-4 relative z-10">
+                            <div class="flex gap-4">
+                                <span class="text-orange-400 font-bold">古羅馬:</span>
+                                <span>「Laganon」油炸薄麵餅。</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="text-orange-400 font-bold">10 世紀:</span>
+                                <span>阿拉伯商人普及乾燥麵條，利於遠征。</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="text-orange-400 font-bold">19 世紀:</span>
+                                <span>與番茄的「浪漫邂逅」，紅醬正式改寫命運。</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Pro Guide Cards -->
+                <section class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <span class="text-4xl font-display font-black text-orange-400/30">03.</span>
+                        <h2 class="text-3xl font-bold">專業吃貨指南</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="p-6 glass-morphism rounded-2xl text-center">
+                            <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🦷</div>
+                            <h4 class="font-bold mb-2">Al Dente 靈魂</h4>
+                            <p class="text-sm text-slate-600">麵芯保留咬勁，釋放極致麥香。</p>
+                        </div>
+                        <div class="p-6 glass-morphism rounded-2xl text-center">
+                            <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🤝</div>
+                            <h4 class="font-bold mb-2">門當戶對</h4>
+                            <p class="text-sm text-slate-600">醬汁與形狀的物理契合，絕不亂配。</p>
+                        </div>
+                        <div class="p-6 glass-morphism rounded-2xl text-center">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🌿</div>
+                            <h4 class="font-bold mb-2">健康潮流</h4>
+                            <p class="text-sm text-slate-600">捨棄厚重勾芡，回歸新鮮橄欖油。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4 & 5: Combined Modern & Future -->
+                <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-amber-100/50 p-8 rounded-[2rem] border-2 border-amber-200">
+                        <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                            <span class="text-3xl">🚫</span> 麵條保衛戰
+                        </h2>
+                        <div class="space-y-4 text-sm">
+                            <div>
+                                <h5 class="font-bold text-amber-800">馬可波羅的冤枉債</h5>
+                                <p class="text-slate-600">義大利在馬可波羅出生前已有成熟麵食記載，這是美味的巧合。</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-amber-800">卡波納拉鮮奶油之爭</h5>
+                                <p class="text-slate-600">加鮮奶油是異端！正宗只需雞蛋、起司、胡椒與豬頰肉。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-indigo-900 text-indigo-100 p-8 rounded-[2rem] shadow-lg">
+                        <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                            <span class="text-3xl">🚀</span> 未來趨勢
+                        </h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="bg-indigo-500 text-white rounded px-2 py-0.5 text-xs mt-1">NEW</span>
+                                <span><strong>櫛瓜麵與鷹嘴豆麵：</strong> 脫離澱粉罪惡感。</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="bg-indigo-500 text-white rounded px-2 py-0.5 text-xs mt-1">TECH</span>
+                                <span><strong>3D 列印麵條：</strong> 極致幾何之美與口感優化。</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Conclusion -->
+                <section class="bg-white p-10 rounded-[3rem] shadow-inner text-center border-4 border-dashed border-slate-200">
+                    <div class="text-5xl mb-6">🥗</div>
+                    <h2 class="text-3xl font-black text-slate-800 mb-6 font-display">下一頓義大利麵，你想選哪一種？</h2>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
+                        探索義大利麵的種類，就像是在閱讀地理與歷史的縮影。餐桌上的每一口麵，都承載著古往今來的創新與堅持。
+                    </p>
+                    <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-full transition-all transform hover:scale-110 active:scale-95 shadow-lg">
+                        立即探索更多麵條故事
+                    </button>
+                    <div class="mt-12 pt-8 border-t border-slate-100 text-slate-400 font-medium">
+                        學號：D11016005
+                    </div>
+                </section>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="lg:w-1/3 space-y-8">
+                <div class="glass-morphism p-8 rounded-[2.5rem] sticky top-8">
+                    <div class="text-center mb-8">
+                        <div class="w-24 h-24 bg-gradient-to-tr from-orange-400 to-yellow-200 rounded-full mx-auto mb-4 border-4 border-white shadow-md flex items-center justify-center text-4xl">
+                            🎓
+                        </div>
+                        <h4 class="font-black text-xl">知識份子隨筆</h4>
+                        <p class="text-slate-500 text-sm">D11016005</p>
+                    </div>
+
+                    <nav class="space-y-4">
+                        <a href="#" class="sidebar-item block p-4 bg-white/50 rounded-2xl font-bold flex items-center gap-3 group">
+                            <span class="group-hover:rotate-12 transition-transform">🍝</span> 經典圓直麵專題
+                        </a>
+                        <a href="#" class="sidebar-item block p-4 bg-white/50 rounded-2xl font-bold flex items-center gap-3 group">
+                            <span class="group-hover:rotate-12 transition-transform">🍅</span> 紅白醬大戰紀實
+                        </a>
+                        <a href="#" class="sidebar-item block p-4 bg-white/50 rounded-2xl font-bold flex items-center gap-3 group">
+                            <span class="group-hover:rotate-12 transition-transform">🧪</span> 物理與麵條的張力
+                        </a>
+                    </nav>
+
+                    <div class="mt-10 p-6 bg-orange-400 rounded-[2rem] text-white">
+                        <h5 class="font-bold mb-2">✨ 小百科</h5>
+                        <p class="text-xs leading-relaxed opacity-90">
+                            「Durum」在拉丁語中意為「堅硬」。這種小麥是製作高品質義大利麵的唯一首選。
+                        </p>
+                    </div>
+
+                    <div class="mt-8 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-200 rounded-full text-[10px] font-bold text-slate-600 uppercase tracking-widest">Culture</span>
+                        <span class="px-3 py-1 bg-slate-200 rounded-full text-[10px] font-bold text-slate-600 uppercase tracking-widest">Gastronomy</span>
+                        <span class="px-3 py-1 bg-slate-200 rounded-full text-[10px] font-bold text-slate-600 uppercase tracking-widest">History</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Floating Background Decorative Elements -->
+    <div class="fixed top-20 left-10 w-32 h-32 bg-orange-200/20 blur-3xl -z-10 rounded-full animate-pulse"></div>
+    <div class="fixed bottom-20 right-10 w-64 h-64 bg-blue-200/20 blur-3xl -z-10 rounded-full animate-pulse-soft"></div>
+
+    <script>
+        // Simple Intersection Observer for reveal animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-scroll-reveal');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section, .content-card').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+
